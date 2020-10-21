@@ -1,0 +1,522 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  width: auto;
+  height: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+}
+
+header {
+  position: relative;
+  margin-bottom: 2px;
+}
+
+nav {
+  width: 100%;
+  position: absolute;
+  margin: auto;
+  grid-area: nav-bar;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  list-style: none;
+  float: left;
+  text-align: center;
+  box-sizing: border-box;
+  width: calc(100% / 6);
+  background: white;
+  border-left: 1px solid #fff;
+  border-right: 1px solid #ccc;
+}
+
+nav ul li a {
+  display: block;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 900;
+  color: gray;
+  padding: 17px;
+}
+
+nav ul li a:hover {
+  background: black;
+}
+
+footer {
+  background-color: rgba(0, 0, 0, 1);
+  display: flex;
+  padding-top: 4vh;
+  padding-bottom: 2vh;
+  justify-content: center;
+  position: relative;
+  grid-area: footer;
+}
+
+.main-section {
+  display: grid;
+  grid-template-columns: 1fr 0.25fr;
+  grid-template-areas:
+    "nav-bar nav-bar"
+    "main-section-information main-section-photos"
+    "footer footer";
+  gap: 30px;
+}
+
+.center-text {
+  text-align: center;
+}
+
+.justify-text {
+  text-align: justify;
+}
+
+.header-heading {
+  padding: 80px;
+  text-shadow: 5px 5px 10px black;
+  font-size: 1.7rem;
+  color: red;
+}
+
+.header-quote {
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.header-quote-content {
+  color: yellow;
+  text-shadow: 3px 3px 2px black;
+}
+
+.header-background-img {
+  background-image: url("/images/bob-marley.jpg");
+  width: auto;
+  height: 65vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.information-text {
+  font-size: 1.5em;
+  text-indent: 1.5em;
+  padding-bottom: 5vh;
+  padding-right: 15px;
+}
+
+.main-section-heading {
+  font-size: 2.5em;
+  padding-top: 6vh;
+  padding-bottom: 2vh;
+}
+
+.main-section-information {
+  text-align: justify;
+  margin-left: 0.5rem;
+  grid-area: main-section-information;
+}
+
+.main-section-photos {
+  margin-top: 15vh;
+  font-size: 1.5em;
+  justify-content: center;
+  grid-area: main-section-photos;
+  padding-right: 30px;
+  padding-bottom: 20px;
+}
+
+.main-section-photos-heading {
+  padding-bottom: 15px;
+}
+
+.footer-link {
+  position: absolute;
+  text-decoration: none;
+  color: white;
+  font-weight: 900;
+  margin-right: 2vw;
+  margin-left: 1vw;
+  font-size: 1.1em;
+  bottom: 0%;
+  left: 0%;
+}
+
+.footer-link:hover {
+  color: red;
+}
+
+.footer-text {
+  font-size: 3vh;
+  bottom: 0%;
+}
+
+.list {
+  font-size: 1.5em;
+  display: list-item;
+  padding-bottom: 7vh;
+}
+
+.list ul {
+  margin-left: 1.5rem;
+}
+
+#img-section-photos {
+  width: 100%;
+  height: auto;
+  padding-bottom: 30px;
+}
+
+#source {
+  text-align: center;
+}
+
+#source-link {
+  text-decoration: none;
+  font-weight: 800;
+  color: white;
+}
+
+#source-link:hover {
+  color: red;
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  header {
+    margin-bottom: 1px;
+  }
+
+  .main-section {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "nav-bar"
+      "main-section-information"
+      "main-section-photos"
+      "footer";
+    gap: 0;
+  }
+
+  nav ul li {
+    width: calc(100% / 1);
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid #ccc;
+    border-top: 1px solid #fff;
+  }
+
+  nav ul li a {
+    padding-top: 7px;
+    padding-bottom: 7px;
+  }
+
+  nav {
+    position: relative;
+  }
+
+  footer {
+    padding-top: 6vh;
+    padding-bottom: 6vh;
+  }
+
+  .header-heading {
+    padding-top: 50px;
+    padding-left: 30px;
+    font-size: 1rem;
+  }
+
+  .header-background-img {
+    height: 45vh;
+  }
+
+  .header-quote {
+    font-size: 13px;
+  }
+
+  .main-section-information {
+    width: 95%;
+  }
+
+  .main-section-heading {
+    font-size: 1.7em;
+    padding-top: 4.5vh;
+    padding-bottom: 1vh;
+  }
+
+  .information-text {
+    font-size: 1.3em;
+    text-indent: 1.1em;
+    padding-bottom: 3vh;
+  }
+
+  .main-section-photos {
+    margin-top: 5vh;
+    font-size: 1.3em;
+    padding-left: 25px;
+  }
+
+  .list {
+    font-size: 1.3em;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+  header {
+    margin-bottom: 2px;
+  }
+
+  .main-section {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "nav-bar"
+      "main-section-information"
+      "main-section-photos"
+      "footer";
+    gap: 0;
+  }
+
+  nav ul li {
+    width: calc(100% / 1);
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid #ccc;
+    border-top: 1px solid #fff;
+  }
+
+  nav ul li a {
+    padding-top: 7px;
+    padding-bottom: 7px;
+  }
+
+  nav {
+    position: relative;
+  }
+
+  footer {
+    padding-top: 6vh;
+    padding-bottom: 6vh;
+  }
+
+  .header-heading {
+    padding-top: 50px;
+    padding-left: 35px;
+    font-size: 1.1rem;
+  }
+
+  .header-background-img {
+    height: 50vh;
+  }
+
+  .header-quote {
+    font-size: 14px;
+  }
+
+  .main-section-information {
+    width: 95%;
+  }
+
+  .main-section-heading {
+    font-size: 1.9em;
+    padding-top: 5vh;
+    padding-bottom: 1vh;
+  }
+
+  .information-text {
+    font-size: 1.3em;
+    text-indent: 1.1em;
+    padding-bottom: 3vh;
+  }
+
+  .main-section-photos {
+    margin-top: 5vh;
+    font-size: 1.3em;
+    padding-left: 25px;
+  }
+
+  .list {
+    font-size: 1.3em;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .main-section {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "nav-bar"
+      "main-section-information"
+      "main-section-photos"
+      "footer";
+    gap: 0;
+  }
+
+  nav {
+    position: relative;
+  }
+
+  nav ul li {
+    width: calc(100% / 3);
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #fff;
+    border-bottom: 1px solid #ccc;
+    border-top: 1px solid #fff;
+  }
+
+  nav ul li a {
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+
+  footer {
+    padding-top: 4vh;
+    padding-bottom: 4vh;
+  }
+
+  .header-heading {
+    padding-top: 70px;
+    padding-left: 50px;
+    font-size: 1.3rem;
+  }
+
+  .header-background-img {
+    height: 65vh;
+  }
+
+  .header-quote {
+    font-size: 15px;
+  }
+
+  .main-section-information {
+    width: 97%;
+  }
+
+  .main-section-heading {
+    font-size: 2em;
+    padding-top: 6vh;
+    padding-bottom: 1vh;
+  }
+
+  .information-text {
+    font-size: 1.45em;
+    text-indent: 1.1em;
+    padding-bottom: 3vh;
+  }
+
+  .main-section-photos {
+    margin-top: 10vh;
+    font-size: 1.5em;
+    padding-left: 25px;
+  }
+
+  .list {
+    font-size: 1.45em;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+  .main-section {
+    grid-template-columns: 1fr 0.4fr;
+    grid-template-areas:
+      "nav-bar nav-bar"
+      "main-section-information main-section-photos"
+      "footer footer";
+    gap: 30px;
+  }
+
+  nav {
+    position: absolute;
+  }
+
+  nav ul li {
+    width: calc(100% / 6);
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #fff;
+  }
+
+  nav ul li a {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: 13.3px;
+  }
+
+  footer {
+    padding-top: 6vh;
+    padding-bottom: 4.5vh;
+  }
+
+  .header-heading {
+    padding-top: 70px;
+    padding-left: 70px;
+    font-size: 1.4rem;
+  }
+
+  .header-quote {
+    font-size: 15.5px;
+  }
+
+  .main-section-heading {
+    font-size: 2.2em;
+    padding-top: 6vh;
+    padding-bottom: 1vh;
+  }
+
+  .information-text {
+    font-size: 1.5em;
+    text-indent: 1.25em;
+    padding-bottom: 4vh;
+  }
+
+  .main-section-photos {
+    margin-top: 10vh;
+    font-size: 1.5em;
+    padding-left: 10px;
+  }
+
+  .list {
+    font-size: 1.5em;
+  }
+}
+
+@media (min-width: 1281px) {
+  .main-section {
+    grid-template-columns: 1fr 0.35fr;
+  }
+
+  .header-heading {
+    padding-top: 70px;
+    padding-left: 70px;
+    font-size: 1.55rem;
+  }
+
+  .header-background-img {
+    height: 60vh;
+  }
+
+  .header-quote {
+    font-size: 15.5px;
+  }
+
+  .main-section-heading {
+    font-size: 2.3em;
+    padding-top: 6vh;
+    padding-bottom: 2vh;
+  }
+
+  .information-text {
+    text-indent: 1.4em;
+    padding-bottom: 5vh;
+  }
+
+  .main-section-photos {
+    margin-top: 13vh;
+    font-size: 1.5em;
+  }
+}
